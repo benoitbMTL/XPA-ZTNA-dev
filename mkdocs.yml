@@ -5,6 +5,7 @@ theme:
   logo: images/fortinet.svg
   favicon: images/fortinet.svg
   features:
+    - toc.integrate
     - navigation.instant
     - navigation.tracking
     - navigation.top
