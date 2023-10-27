@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check if a container named 'fortiweb-hol' already exists
-container_id=$(sudo docker ps -a -q -f name=fortiweb-hol)
+container_id=$(sudo docker ps -a -q -f name=ztna-hol)
 
 if [ -n "$container_id" ]; then
 	# Stop the container
@@ -15,8 +15,7 @@ fi
 git pull origin main
 
 # Build the Docker image
-# docker build --progress=plain -t fortiweb-hol .
-sudo docker build -t fortiweb-hol .
+sudo docker build -t ztna-hol .
 
 # Run the Docker container
-sudo docker run -d --restart unless-stopped --name fortiweb-hol-container -p 8000:8000 fortiweb-hol
+sudo docker run -d --restart unless-stopped --name ztna-hol-container -p 8000:8000 ztna-hol
